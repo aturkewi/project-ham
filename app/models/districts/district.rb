@@ -1,11 +1,22 @@
-require 'json'
-require 'open-uri'
-require 'pry'
+class District < ActiveRecord::Base
 
-class School 
+  require 'json'
+  require 'open-uri'
+  require 'pry'
+
+  def self.parse
+    url = "http://data.cityofnewyork.us/api/views/rfpq-hs49/rows.json"
+    result = JSON.parse(open(url).read)
+    district_array = result["data"]
+  end 
+
+  def self.populate_db
+    district_array = parse
+    binding.pry
+  end 
 
   def attendance
-    file = File.read('./app/models/schools/attendance.json')
+    file = File.read('./app/models/districts/attendance.json')
     data_hash = JSON.parse(file)
     districts = data_hash["data"]
     manhattan = districts[0..5]
@@ -45,5 +56,4 @@ class School
 
 end 
 
-school = School.new
-school.attendance
+District.populate_db
