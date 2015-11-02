@@ -1,5 +1,7 @@
 class Hospital < ActiveRecord::Base
 
+  # hospital data from: https://data.cityofnewyork.us/Health/Health-and-Hospitals-Corporation-HHC-Facilities/f7b6-v6v3
+
   require 'pp'
   require 'open-uri'
   require 'json'
