@@ -7,29 +7,31 @@ class School
   def attendance
     file = File.read('./app/models/schools/attendance.json')
     data_hash = JSON.parse(file)
+    districts = data_hash["data"]
+    manhattan = districts[0..5]
+    bronx = districts[6..11]
+    brooklyn = districts[12..22]
+    queens = districts[23..29]
+    staten_island = districts[30]
+    man_array = manhattan.map do |district|
+      district[9].to_f
+    end
+    man_avg = man_array.inject{ |sum, el| sum + el }.to_f / man_array.size
+    bronx_array = bronx.map do |district|
+      district[9].to_f
+    end
+    bronx_avg = (bronx_array.inject{ |sum, el| sum + el }.to_f / bronx_array.size).round(2)
+    bk_array = brooklyn.map do |district|
+      district[9].to_f
+    end
+    bk_avg = (bk_array.inject{ |sum, el| sum + el }.to_f / bk_array.size).round(2)
+    queens_array = queens.map do |district|
+      district[9].to_f
+    end
+    queens_avg = (queens_array.inject{ |sum, el| sum + el }.to_f / queens_array.size).round(2)
+    staten_avg = staten_island[9].to_f
+    binding.pry
   end
-
-  # [{"count"=>20, "item"=>"91.18"},
-  # {"count"=>19, "item"=>"89.01"},
-  # {"count"=>18, "item"=>"89.28"},
-  # {"count"=>17, "item"=>"91.13"},
-  # {"count"=>16, "item"=>"89.08"},
-  # {"count"=>15, "item"=>"91.34"},
-  # {"count"=>14, "item"=>"86.75"},
-  # {"count"=>13, "item"=>"87.15"},
-  # {"count"=>12, "item"=>"89.27"},
-  # {"count"=>11, "item"=>"88.92"},
-  # {"count"=>10, "item"=>"89.84"},
-  # {"count"=>9, "item"=>"87.33"},
-  # {"count"=>8, "item"=>"89.56"},
-  # {"count"=>7, "item"=>"89.41"},
-  # {"count"=>6, "item"=>"91.27"},
-  # {"count"=>5, "item"=>"85.55"},
-  # {"count"=>4, "item"=>"89.67"},
-  # {"count"=>3, "item"=>"89.83"},
-  # {"count"=>2, "item"=>"87.81"},
-  # {"count"=>1, "item"=>"92.77"}]
-
 
   def report_cards
     file = File.read('./app/models/schools/report_cards.json')
