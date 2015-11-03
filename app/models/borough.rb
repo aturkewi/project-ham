@@ -20,4 +20,12 @@ class Borough < ActiveRecord::Base
     hospitals.count
   end
 
+  def attendance
+    array = self.districts.map do |district|
+      district.attendance
+    end
+    avg_attendance=(array.inject{ |sum, x| sum + x } / array.size).round(2)
+    avg_attendance
+  end
+
 end
