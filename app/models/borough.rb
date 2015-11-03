@@ -10,4 +10,12 @@ class Borough < ActiveRecord::Base
     create(name:"Staten Island", population:473279, area:58)
   end
 
+  def attendance
+    array = self.districts.map do |district|
+      district.attendance
+    end
+    avg_attendance=(array.inject{ |sum, x| sum + x } / array.size).round(2)
+    avg_attendance
+  end
+
 end
