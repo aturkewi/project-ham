@@ -37,9 +37,12 @@ class Comparison < ActiveRecord::Base
       }
     }
 
+
     Pearson.coefficient(scores, 'Sarah', 'Lisa')
 
   end
+
+
 
 
 

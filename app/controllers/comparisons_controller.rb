@@ -1,7 +1,7 @@
 class ComparisonsController < ApplicationController
 
-  # def index
-  #     Comparison.compare()
-  # end
+  def index
+      @jobs = Job.all
+  end
 
 end

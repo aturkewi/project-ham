@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :public_bins
-  resources :jobs
+  resources :comparisons
   resources :jobs do
     collection { post :import }
   end
