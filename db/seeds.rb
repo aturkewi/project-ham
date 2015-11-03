@@ -7,3 +7,4 @@ Adapters::HospitalClient.new.get_json_data
 Job.create_csv
 # Seeds Job data
 
+Borough.populate_db

@@ -8,9 +8,8 @@
 #
 
 
-require 'pearson'
 class Comparison < ActiveRecord::Base
-
+ 
   def self.compare
 
     scores = {
@@ -50,8 +49,6 @@ class Comparison < ActiveRecord::Base
     Pearson.coefficient(scores, 'Sarah', 'Lisa')
 
   end
-
-
 
 
 
