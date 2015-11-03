@@ -1,10 +1,11 @@
 class CreateDistricts < ActiveRecord::Migration
   def change
     create_table :districts do |t|
+      t.integer :number
+      t.integer :attendance
       t.integer :borough_id
-      t.float :attendance
-      t.string :grade
-      t.integer :sat
+
+      t.timestamps null: false
     end
   end
 end
