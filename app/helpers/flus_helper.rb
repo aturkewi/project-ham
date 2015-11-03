@@ -1,0 +1,2 @@
+module FlusHelper
+end

@@ -5,9 +5,5 @@ require 'open-uri'
 require 'json'
 require 'csv'
 
-require 'json'
-require 'open-uri'
-require 'pry'
-
 # Initialize the Rails application.
 Rails.application.initialize!
