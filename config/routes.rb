@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
 
-  resources :comparisons
+  root 'comparisons#index'
+  get 'comparisons/:data_set1+:data_set2+:normalizer' => 'comparisons#show', as: 'show_comparisons'
+  
+    #show_comparisons_path(data_set1, data_set2, normalizer)
+  # resources :comparisons
 
 
 

@@ -5,6 +5,7 @@ class ComparisonsController < ApplicationController
   end
 
   def show
+    binding.pry
     @data_set1 = Job.all
   end
 

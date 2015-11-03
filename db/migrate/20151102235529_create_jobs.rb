@@ -5,7 +5,7 @@ class CreateJobs < ActiveRecord::Migration
       t.integer :labor_force
       t.integer :employed
       t.integer :unemployed
-      t.float :unemployment
+      t.float :unemployment_rate
       t.timestamps null: false
     end
   end

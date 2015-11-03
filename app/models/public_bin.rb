@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: public_bins
+#
+#  id         :integer          not null, primary key
+#  borough_id :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 
 class PublicBin < ActiveRecord::Base
 

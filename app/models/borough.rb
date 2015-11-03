@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: boroughs
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  area       :integer
+#  population :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Borough < ActiveRecord::Base
 
 
