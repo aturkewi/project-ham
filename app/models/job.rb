@@ -1,5 +1,5 @@
 
-require 'csv'
+
 class Job < ActiveRecord::Base
 
   def self.create_csv
@@ -9,6 +9,7 @@ class Job < ActiveRecord::Base
       Job.create!(row.to_hash)
     end
   end
+
 
   # def self.import(file)
 

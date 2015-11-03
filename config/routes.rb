@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :public_bins
   resources :jobs
   resources :jobs do
     collection { post :import }
