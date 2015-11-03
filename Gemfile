@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 
 gem 'httparty'
-
+gem 'recursive-open-struct'
+gem 'annotate'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'

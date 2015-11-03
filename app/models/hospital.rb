@@ -2,9 +2,7 @@ class Hospital < ActiveRecord::Base
 
   # hospital data from: https://data.cityofnewyork.us/Health/Health-and-Hospitals-Corporation-HHC-Facilities/f7b6-v6v3
 
-  require 'pp'
-  require 'open-uri'
-  require 'json'
+
   require 'pry'
 
   BOROUGH_HASH = {"bronx"=>1, "brooklyn"=>2, "manhattan"=>3, "queens"=>4, "staten island"=>5}
