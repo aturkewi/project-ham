@@ -21,7 +21,7 @@ class Borough < ActiveRecord::Base
     hospitals.count
   end
 
-  def attendance
+  def district_attendance
     array = self.districts.map do |district|
       district.attendance
     end
