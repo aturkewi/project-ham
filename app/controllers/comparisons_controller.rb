@@ -4,4 +4,8 @@ class ComparisonsController < ApplicationController
       @jobs = Job.all
   end
 
+  def show
+    @data_set1 = Job.all
+  end
+
 end
