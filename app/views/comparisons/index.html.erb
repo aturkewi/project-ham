@@ -1,0 +1,10 @@
+<h1>Labor force</h1>
+
+<%@jobs.each do |job|%>
+<p>
+Borough id
+<%=job.borough_id%>
+:
+<%= job.labor_force%>
+<p>
+<%end%>

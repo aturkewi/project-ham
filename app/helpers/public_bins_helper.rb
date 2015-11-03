@@ -1,0 +1,2 @@
+module PublicBinsHelper
+end
