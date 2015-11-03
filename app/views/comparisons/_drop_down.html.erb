@@ -1,0 +1,19 @@
+<!--
+  .hospitals.count
+  .flues.count
+
+-->
+  <%= form_tag('/comparisons/show', method: :get) %>  
+  <p>
+  <%= label_tag 'data1'%>
+  <%= text_field_tag 'data1'%>
+  </p>
+  <p>
+  <%= label_tag 'data2'%>
+  <%= text_field_tag 'data2'%>
+  </p>
+  <p>
+  <%= label_tag 'normalizer'%>
+  <%= text_field_tag 'normalizer'%>
+  </p>
+  <%= submit_tag %>

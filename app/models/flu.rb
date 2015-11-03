@@ -10,6 +10,6 @@
 #
 
 class Flu < ActiveRecord::Base
-
+  belongs_to :borough
 
 end

@@ -3,12 +3,14 @@
 <tr>
 <th>Borough Id</th>
 <th>Labor Force</th>
+<th>Flu Centers</th>
 </tr>
 
-<%data_set1.each do |job|%>
+<% boroughs.each do |borough|%>
 <tr>
-<td><%=job.id%></th>
-<td><%= job.labor_force%></th>
+<td><%=borough.name%></td>
+<td><%= borough.hospital_count %></td>
+<td><%= borough.flus.count%></td>
 </tr>
 
 <%end%>
