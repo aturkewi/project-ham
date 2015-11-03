@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  borough_id: MyString
+  murder: 1
+  rape: 1
+  robbery: 1
+  assault: 1
+  burglary: 1
+  grand_larceny: 1
+  grand_larceny_auto: 1
+
+two:
+  borough_id: MyString
+  murder: 1
+  rape: 1
+  robbery: 1
+  assault: 1
+  burglary: 1
+  grand_larceny: 1
+  grand_larceny_auto: 1
