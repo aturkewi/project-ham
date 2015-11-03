@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  borough_id: 1
+  name: MyString
+  type: 
+
+two:
+  borough_id: 1
+  name: MyString
+  type: 
