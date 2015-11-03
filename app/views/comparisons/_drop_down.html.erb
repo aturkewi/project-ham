@@ -1,19 +1,15 @@
-<!--
-  .hospitals.count
-  .flues.count
+<%= form_tag('/comparisons/show', method: :get) %>  
+<p>
+<%= label_tag 'data1'%>
+<%= select_tag :data_set_one, options_for_select([["hospital_count"], ["district_attendance"]])%>
+</p>
+<p>
+<%= label_tag 'data2'%>
+<%= select_tag :data_set_two, options_for_select([["hospital_count"], ["district_attendance"]])%>
+</p>
+<p>
+<%= label_tag 'normalizer'%>
+<%= select_tag :normalizer, options_for_select([["population"], ["area"], ["population_density"]])%>
+</p>
+<%= submit_tag "Return"%>
 
--->
-  <%= form_tag('/comparisons/show', method: :get) %>  
-  <p>
-  <%= label_tag 'data1'%>
-  <%= text_field_tag 'data1'%>
-  </p>
-  <p>
-  <%= label_tag 'data2'%>
-  <%= text_field_tag 'data2'%>
-  </p>
-  <p>
-  <%= label_tag 'normalizer'%>
-  <%= text_field_tag 'normalizer'%>
-  </p>
-  <%= submit_tag %>

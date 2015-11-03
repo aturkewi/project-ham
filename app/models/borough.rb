@@ -23,7 +23,7 @@ class Borough < ActiveRecord::Base
     normalizer ? num_of_hospitals/self.send(normalizer) : num_of_hospitals
   end
 
-  def attendance(normalizer)
+  def district_attendance(normalizer)
     array = self.districts.map do |district|
       district.attendance
     end
