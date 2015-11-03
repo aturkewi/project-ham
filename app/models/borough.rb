@@ -14,6 +14,7 @@ class Borough < ActiveRecord::Base
 
   has_many :hospitals
   has_many :flus
+  has_many :districts
 
 
   def hospital_count
