@@ -13,6 +13,8 @@ Adapters::FluClient.new.get_json_data
 Adapters::HospitalClient.new.get_json_data
 # Seeds Hospital data
 
+Adapters::DistrictClient.new.get_json_data
+
 Job.create_csv
 # Seeds Job data
 

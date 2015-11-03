@@ -5,12 +5,11 @@
 <th>Labor Force</th>
 <th>Flu Centers</th>
 </tr>
-
 <% boroughs.each do |borough|%>
 <tr>
 <td><%=borough.name%></td>
-<td><%= borough.hospital_count %></td>
-<td><%= borough.flus.count%></td>
+<td><%= borough.send(data_set1,normalizer) %></td>
+<td><%= borough.send(data_set2,normalizer)%></td>
 </tr>
 
 <%end%>
