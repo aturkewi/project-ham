@@ -19,7 +19,6 @@ class Borough < ActiveRecord::Base
 
   def hospital_count(normalizer)
     num_of_hospitals = hospitals.count
-    binding.pry
     normalizer ? num_of_hospitals/self.send(normalizer) : num_of_hospitals
   end
 

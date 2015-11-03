@@ -1,9 +1,8 @@
-<h1>Labor force</h1>
 <table>
 <tr>
-<th>Borough Id</th>
-<th>Labor Force</th>
-<th>Flu Centers</th>
+<th>Borough</th>
+<th><%= data_set1.split('_').map(&:capitalize).join(' ')%></th>
+<th><%= data_set2.split('_').map(&:capitalize).join(' ')%></th>
 </tr>
 <% boroughs.each do |borough|%>
 <tr>

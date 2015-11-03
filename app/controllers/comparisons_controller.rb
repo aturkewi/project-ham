@@ -7,8 +7,8 @@ class ComparisonsController < ApplicationController
 
   def show
     @boroughs = Borough.all
-    @data_set1 = params[:data1]
-    @data_set2 = params[:data2]
+    @data_set1 = params[:data_set_one]
+    @data_set2 = params[:data_set_two]
     @normalizer = params[:normalizer]
   end
 
