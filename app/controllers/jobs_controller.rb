@@ -1,7 +1,6 @@
 class JobsController < ApplicationController
 
-
-  def index
+ def index
   
   end
 
@@ -10,5 +9,5 @@ class JobsController < ApplicationController
     redirect_to jobs_path, notice: "jobs added successfully"
   end
 
-  
+
 end
