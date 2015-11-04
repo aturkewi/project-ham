@@ -25,8 +25,13 @@ class Borough < ActiveRecord::Base
   end
 
   def farmers_market_count(normalizer)
-    num_of_markets = market.count
+    num_of_markets = farmers_markets.count
     normalizer != "nil" ? num_of_markets/self.send(normalizer) : num_of_markets
+  end
+
+  def community_garden_count(normalizer)
+    num_of_gardens = community_gardens.count
+    normalizer != "nil" ? num_of_gardens/self.send(normalizer) : num_of_gardens
   end
 
   def district_attendance(normalizer)

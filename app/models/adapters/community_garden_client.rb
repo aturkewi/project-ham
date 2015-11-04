@@ -12,7 +12,7 @@ module Adapters
     def get_json_data
       garden_array = connection.query("/resource/ajxm-kzmj.json")
       garden_array.each do |garden_data|
-        borough_num=BOROUGH_HASH[garden_data['boro']]
+        borough_num=BOROUGH_LETTER_HASH[garden_data['boro']]
         CommunityGarden.create(name:garden_data['garden_name'], size:garden_data['size'], borough_id:borough_num)
       end
     end
