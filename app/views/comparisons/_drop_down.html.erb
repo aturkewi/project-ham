@@ -1,14 +1,18 @@
 <%= form_tag('/comparisons/show', method: :get) %>  
 <p>
-<%= label_tag 'data1'%>
-<%= select_tag :data_set_one, options_for_select([["Hospital Count", "hospital_count"], ["District Attendance","district_attendance"]])%>
+<%= label_tag 'data 1'%>
+<%= select_tag :data_set_one, options_for_select([["Hospital Count", "hospital_count"], ["District Attendance","district_attendance"], ["Farmers Market Count", "farmers_market_count"], ["Flu Count", "flu_count"], ["Community Garden Count", "community_garden_count"]])%>
 </p>
 <p>
-<%= label_tag 'data2'%>
-<%= select_tag :data_set_two, options_for_select([["Hospital Count", "hospital_count"], ["District Attendance","district_attendance"]])%>
+<%= label_tag 'normalizer 1'%>
+<%= select_tag :normalizer, options_for_select([["Population","population"], ["Area","area"], ["Population Density", "population_density"], ["None", "nil"]])%>
 </p>
 <p>
-<%= label_tag 'normalizer'%>
+<%= label_tag 'data 2'%>
+<%= select_tag :data_set_two, options_for_select([["Hospital Count", "hospital_count"], ["District Attendance","district_attendance"], ["Farmers Market Count", "farmers_market_count"], ["Flu Count", "flu_count"], ["Community Garden Count", "community_garden_count"]])%>
+</p>
+<p>
+<%= label_tag 'normalizer 2'%>
 <%= select_tag :normalizer, options_for_select([["Population","population"], ["Area","area"], ["Population Density", "population_density"], ["None", "nil"]])%>
 </p>
 <%= submit_tag "Return"%>
