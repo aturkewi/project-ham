@@ -29,6 +29,11 @@ class Borough < ActiveRecord::Base
     normalizer != "nil" ? num_of_markets/self.send(normalizer) : num_of_markets
   end
 
+  def flu_count(normalizer)
+    num_of_flus = flus.count
+    normalizer != "nil" ? num_flus/self.send(normalizer) : num_of_flus
+  end
+
   def community_garden_count(normalizer)
     num_of_gardens = community_gardens.count
     normalizer != "nil" ? num_of_gardens/self.send(normalizer) : num_of_gardens
