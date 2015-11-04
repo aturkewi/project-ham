@@ -12,7 +12,9 @@
 
 class Hospital < ActiveRecord::Base
 
+
   belongs_to :boroguh
+
 
   def self.number_of
     binding.pry

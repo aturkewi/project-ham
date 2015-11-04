@@ -15,8 +15,8 @@ class Borough < ActiveRecord::Base
   has_many :hospitals
   has_many :flus
   has_many :districts
-
-
+  has_many :jobs
+  
   def hospital_count(normalizer)
     num_of_hospitals = hospitals.count
     normalizer ? num_of_hospitals/self.send(normalizer) : num_of_hospitals
