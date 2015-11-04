@@ -8,40 +8,32 @@
 #
 
 
-class Comparison < ActiveRecord::Base
+class Comparison
 
-  attr_accessor :data1, :data2, :normalize, :correlation
+  attr_accessor :data1, :data2, :normalizer
+  attr_reader :correlation
 
-  def initialize(data1, data2, normalize, correlation)
+  def initialize(data1, data2, normalizer)
     @data1 = data1
     @data2 = data2
-    @normalize = normalize
-    @correlation = correlation
+    @normalizer = normalizer
   end
 
-  # def magic_box
-  #   #User visits index, selects data sets from dropdown. Then, data is sent to show page
-  #   #need method that returns data in hash form
-  #   #need method that calculates correlation
-  #   #
-  # end
-
-
-  def self.get_hash(data_set_name)
-   Borough.all.each_with_object({}) do |borough, hash|
-     hash[borough.id] = borough.send(data_set_name)
-   end
+  def get_hash(data_set_name,normalizer)
+      Borough.all.each_with_object({}) do |borough, hash|
+      hash[borough.id] = borough.send(data_set_name,normalizer)
+    end
   end
 
-  # def self.correlation(data_set_1, data_set_2)
-  #    data_hash_1 = get_hash(data_set_1)
-  #    data_hash_2 = get_hash(data_set_2)
+  def calculate_correlation
+    data_hash_1 = get_hash(data1,normalizer)
+    data_hash_2 = get_hash(data2,normalizer)
 
-  #    scores = {
-  #      data_hash_1,
-  #      data_hash_2
-  #    }
-  #    @correlation = Pearson.coefficient(scores, data_set_1, data_set_2)
-  # end
+    scores = {
+      first_data:data_hash_1,  # => {1=>14, 2=>26, 3=>24, 4=>11, 5=>3}
+      second_data:data_hash_2 # => {1=>88.21, 2=>89.6, 3=>90.17, 4=>91.99, 5=>90.98}
+    }
+    @correlation = Pearson.coefficient(scores, :first_data, :second_data)
+  end
  
 end
