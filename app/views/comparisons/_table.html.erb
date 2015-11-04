@@ -1,15 +1,14 @@
 <table>
 <tr>
 <th>Borough</th>
-<th><%= data_set1.split('_').map(&:capitalize).join(' ')%></th>
-<th><%= data_set2.split('_').map(&:capitalize).join(' ')%></th>
+<th><%= readable(comparison.data1)%></th>
+<th><%= readable(comparison.data2)%></th>
 </tr>
 <% boroughs.each do |borough|%>
 <tr>
 <td><%=borough.name%></td>
-<td><%= borough.send(data_set1,normalizer) %></td>
-<td><%= borough.send(data_set2,normalizer)%></td>
+<td><%= borough.send(comparison.data1,comparison.normalizer) %></td>
+<td><%= borough.send(comparison.data2,comparison.normalizer)%></td>
 </tr>
-
 <%end%>
 </table>
