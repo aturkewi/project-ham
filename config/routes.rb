@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
 
 
-  root 'comparisons#index'
-  get 'comparisons/show' => 'comparisons#show', as: 'show_comparisons'
+  root 'boroughs#index'
+  get 'boroughs/show' => 'boroughs#show', as: 'show_boroughs'
   
-    #show_comparisons_path(data_set1, data_set2, normalizer)
-  # resources :comparisons
-
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

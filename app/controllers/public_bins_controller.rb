@@ -1,6 +1,0 @@
-class PublicBinsController < ApplicationController
-  
-
-
-
-end

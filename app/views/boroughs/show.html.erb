@@ -3,6 +3,6 @@
 
 <h2><%= @data_set1.split('_').map(&:capitalize).join(' ')%> Correlated Against <%= @data_set2.split('_').map(&:capitalize).join(' ')%></h2>
 
-<%= render partial: 'comparisons/table.html.erb', locals: {data_set1: @data_set1, data_set2: @data_set2, normalizer: @normalizer, boroughs: @boroughs} %>
+<%= render partial: 'boroughs/table.html.erb', locals: {data_set1: @data_set1, data_set2: @data_set2, normalizer: @normalizer, boroughs: @boroughs} %>
 
 <%= %>
