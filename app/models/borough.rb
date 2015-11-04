@@ -31,7 +31,7 @@ class Borough < ActiveRecord::Base
 
   def flu_count(normalizer)
     num_of_flus = flus.count
-    normalizer != "nil" ? num_flus/self.send(normalizer) : num_of_flus
+    normalizer != "nil" ? num_of_flus/self.send(normalizer) : num_of_flus
   end
 
   def community_garden_count(normalizer)

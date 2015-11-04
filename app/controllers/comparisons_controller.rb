@@ -6,10 +6,6 @@ class ComparisonsController < ApplicationController
 
   def show
     @boroughs = Borough.all
-    @comparison = Comparison.new(params[:data_set_one],params[:data_set_two],params[:normalizer])
-    # @data_set1 = params[:data_set_one]
-    # @data_set2 = params[:data_set_two]
-    # @normalizer = params[:normalizer]
+    @comparison = Comparison.new(params[:data_set_one],params[:data_set_two],params[:normalizer_one],params[:normalizer_two])
   end   
-
 end

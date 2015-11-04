@@ -13,7 +13,7 @@
 class Hospital < ActiveRecord::Base
 
 
-  belongs_to :boroguh
+  belongs_to :borough
 
 
   def self.number_of

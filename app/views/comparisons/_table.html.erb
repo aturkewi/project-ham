@@ -7,8 +7,9 @@
 <% boroughs.each do |borough|%>
 <tr>
 <td><%=borough.name%></td>
-<td><%= borough.send(comparison.data1,comparison.normalizer) %></td>
-<td><%= borough.send(comparison.data2,comparison.normalizer)%></td>
+
+<td><%= borough.send(comparison.data1,comparison.normalizer1) %></td>
+<td><%= borough.send(comparison.data2,comparison.normalizer2)%></td>
 </tr>
 <%end%>
 </table>

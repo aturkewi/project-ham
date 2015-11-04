@@ -8,15 +8,16 @@
 #
 
 
-class Comparison
+class Comparison 
 
-  attr_accessor :data1, :data2, :normalizer
+  attr_accessor :data1, :data2, :normalizer1, :normalizer2
   attr_reader :correlation
 
-  def initialize(data1, data2, normalizer)
+  def initialize(data1, data2, normalizer1, normalizer2)
     @data1 = data1
     @data2 = data2
-    @normalizer = normalizer
+    @normalizer1 = normalizer1
+    @normalizer2 = normalizer2
   end
 
   def get_hash(data_set_name,normalizer)
@@ -26,8 +27,8 @@ class Comparison
   end
 
   def calculate_correlation
-    data_hash_1 = get_hash(data1,normalizer)
-    data_hash_2 = get_hash(data2,normalizer)
+    data_hash_1 = get_hash(data1,normalizer1)
+    data_hash_2 = get_hash(data2,normalizer2)
 
     scores = {
       first_data:data_hash_1,  # => {1=>14, 2=>26, 3=>24, 4=>11, 5=>3}

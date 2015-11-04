@@ -1,4 +1,3 @@
 class BoroughsController < ApplicationController
 
- 
 end
