@@ -16,6 +16,9 @@ Adapters::HospitalClient.new.get_json_data
 Adapters::FarmersMarketClient.new.get_json_data
 # Seeds FM data
 
+Adapters::CommunityGardenClient.new.get_json_data
+# Seeds community garden data
+
 Adapters::DistrictClient.new.get_json_data
 # seeds district data
 

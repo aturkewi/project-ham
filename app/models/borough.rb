@@ -17,6 +17,7 @@ class Borough < ActiveRecord::Base
   has_many :districts
   has_many :jobs
   has_many :farmers_markets
+  has_many :community_gardens
   
   def hospital_count(normalizer)
     num_of_hospitals = hospitals.count

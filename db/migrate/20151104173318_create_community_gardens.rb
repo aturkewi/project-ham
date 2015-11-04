@@ -3,7 +3,7 @@ class CreateCommunityGardens < ActiveRecord::Migration
     create_table :community_gardens do |t|
       t.string :name
       t.integer :borough_id
-      t.string :area
+      t.string :size
 
       t.timestamps null: false
     end
