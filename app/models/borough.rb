@@ -16,10 +16,16 @@ class Borough < ActiveRecord::Base
   has_many :flus
   has_many :districts
   has_many :jobs
+  has_many :farmers_markets
   
   def hospital_count(normalizer)
     num_of_hospitals = hospitals.count
     normalizer != "nil" ? num_of_hospitals/self.send(normalizer) : num_of_hospitals
+  end
+
+  def farmers_market_count(normalizer)
+    num_of_markets = market.count
+    normalizer != "nil" ? num_of_markets/self.send(normalizer) : num_of_markets
   end
 
   def district_attendance(normalizer)

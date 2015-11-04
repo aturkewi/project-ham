@@ -7,6 +7,8 @@ require 'json'
 require 'csv'
 require 'pearson'
 
+BOROUGH_HASH = {"bronx"=>1, "brooklyn"=>2, "manhattan"=>3, "queens"=>4, "staten island"=>5}
+
 # Initialize the Rails application.
 Rails.application.initialize!
 
