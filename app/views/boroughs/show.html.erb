@@ -1,0 +1,12 @@
+<h3>Borough: <%= @borough.name %></h3>
+
+<h4>Population: <%= @borough.population %></h4>
+
+<h4>Area: <%= @borough.area %> square miles</h4>
+
+<h4>Population Density: <%= @borough.population / @borough.area %> residents/square mile </h4>
+
+<% borough_methods.each do |method| %>
+<p><%= readable(method) %>: <%= @borough.send(method, 'nil') %></p>
+<% end %>
+
