@@ -1,3 +1,9 @@
+Flu.destroy_all
+Hospital.destroy_all
+FarmersMarket.destroy_all
+CommunityGarden.destroy_all
+District.destroy_all
+Job.destroy_all
 
 # Note: area is in square miles
 Borough.create(name:"Bronx", population:1438159, area:42)
@@ -25,4 +31,3 @@ Adapters::DistrictClient.new.get_json_data
 Job.create_csv
 # Seeds Job data
 
-Borough.populate_db

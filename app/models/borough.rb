@@ -40,7 +40,7 @@ class Borough < ActiveRecord::Base
   end
 
   def district_attendance(normalizer)
-    array = self.districts.map do |district|
+    array = districts.map do |district|
       district.attendance
     end
     avg_attendance=(array.inject{ |sum, x| sum + x } / array.size).round(2)

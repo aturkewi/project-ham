@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
 
-  root 'boroughs#index'
-  get 'boroughs/show' => 'boroughs#show', as: 'show_boroughs'
+  root 'comparisons#index'
+  get 'comparisons/show' => 'comparisons#show', as: 'show_boroughs'
   
 
   # The priority is based upon order of creation: first created -> highest priority.
