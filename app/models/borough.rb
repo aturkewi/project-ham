@@ -12,6 +12,7 @@
 
 class Borough < ActiveRecord::Base
 has_many :jobs
+has_many :hospitals
 
   def self.populate_db
     # Note: area is in square miles

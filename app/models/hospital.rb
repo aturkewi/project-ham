@@ -11,7 +11,7 @@
 #
 
 class Hospital < ActiveRecord::Base
-
+  belongs_to :borough
 
 
 
