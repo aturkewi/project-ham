@@ -5,7 +5,8 @@ class SearchController < ApplicationController
     @keyword = params[:keyword]
     @search_result = Search.for(@model, @keyword)
     if @search_result.size == 1
-      redirect to favorite_path(@search_result)
+      path = "#{@model.downcase.pluralize}/#{@search_result.first.id}"
+      redirect_to path
     end
   end
 end
