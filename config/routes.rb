@@ -2,9 +2,15 @@ Rails.application.routes.draw do
 
   resources 'boroughs', :only => [:show]
   root 'comparisons#index'
+
+  get '/login' => 'sessions#new'
+  get '/auth/github/callback' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
   get 'comparisons/show' => 'comparisons#show', as: 'show_boroughs'
 
   
+  resources :users, :only => [:show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
