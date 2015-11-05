@@ -6,6 +6,7 @@ require 'open-uri'
 require 'json'
 require 'csv'
 require 'pearson'
+require 'bigdecimal'
 
 BOROUGH_HASH = {"bronx"=>1, "brooklyn"=>2, "manhattan"=>3, "queens"=>4, "staten island"=>5}
 
