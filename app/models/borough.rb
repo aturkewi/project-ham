@@ -20,22 +20,22 @@ class Borough < ActiveRecord::Base
   has_many :community_gardens
   
   def hospital_count(normalizer)
-    num_of_hospitals = hospitals.count
+    num_of_hospitals = hospitals.count.to_f
     normalizer != "nil" ? num_of_hospitals/self.send(normalizer) : num_of_hospitals
   end
 
   def farmers_market_count(normalizer)
-    num_of_markets = farmers_markets.count
+    num_of_markets = farmers_markets.count.to_f
     normalizer != "nil" ? num_of_markets/self.send(normalizer) : num_of_markets
   end
 
   def flu_count(normalizer)
-    num_of_flus = flus.count
+    num_of_flus = flus.count.to_f
     normalizer != "nil" ? num_of_flus/self.send(normalizer) : num_of_flus
   end
 
   def community_garden_count(normalizer)
-    num_of_gardens = community_gardens.count
+    num_of_gardens = community_gardens.count.to_f
     normalizer != "nil" ? num_of_gardens/self.send(normalizer) : num_of_gardens
   end
 

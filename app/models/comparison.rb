@@ -11,19 +11,27 @@
 class Comparison 
 
   attr_accessor :data1, :data2, :normalizer1, :normalizer2
-  attr_reader :correlation
+  attr_reader :correlation, :exp1, :exp2
 
   def initialize(data1, data2, normalizer1, normalizer2)
     @data1 = data1
     @data2 = data2
     @normalizer1 = normalizer1
     @normalizer2 = normalizer2
+    @exp1 = calculate_scale(get_hash(data1,normalizer1))
+    @exp2 = calculate_scale(get_hash(data2,normalizer2))
   end
 
   def get_hash(data_set_name,normalizer)
       Borough.all.each_with_object({}) do |borough, hash|
       hash[borough.id] = borough.send(data_set_name,normalizer)
     end
+  end
+
+  def calculate_scale(data_hash)
+    max_num = data_hash.values.max
+    BigDecimal.new(max_num.to_s).exponent
+
   end
 
   def calculate_correlation

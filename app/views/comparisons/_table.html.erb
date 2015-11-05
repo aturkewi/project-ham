@@ -4,12 +4,16 @@
 <th><%= readable(comparison.data1)%></th>
 <th><%= readable(comparison.data2)%></th>
 </tr>
+<tr>
+<th></th>
+<th>by <%= 10**(-comparison.exp1)%> <%= comparison.normalizer1%></th>
+<th>by <%= 10**(-comparison.exp2)%> <%= comparison.normalizer2%></th>
+</tr>
 <% boroughs.each do |borough|%>
 <tr>
 <td><%=borough.name%></td>
-
-<td><%= borough.send(comparison.data1,comparison.normalizer1) %></td>
-<td><%= borough.send(comparison.data2,comparison.normalizer2)%></td>
+<td><%= (borough.send(comparison.data1,comparison.normalizer1)*10**(-comparison.exp1+2)).round(2) %></td>
+<td><%= (borough.send(comparison.data2,comparison.normalizer2)*10**(-comparison.exp2+2)).round(2) %></td>
 </tr>
 <%end%>
 </table>
