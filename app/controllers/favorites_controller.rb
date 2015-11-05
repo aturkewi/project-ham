@@ -1,18 +1,12 @@
 class FavoritesController < ApplicationController
 
   def create
-
-    binding.pry
-
+    self.build(params[:favorite])
+    self.save
+    redirect_to favorite_path
   end
 
-  def show_favorite
-    @User = User.find(session[:current_user_id])
-    #at show
-
-
-    # @User.favorites.each do |favorite|
-    #   favorite
-    # end
+  def show
+    @User = current_user
   end
 end
