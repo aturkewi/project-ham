@@ -6,3 +6,8 @@
 <%= render partial: 'comparisons/table.html.erb', locals: {comparison: @comparison, boroughs: @boroughs} %>
 
 <h2>Correlation: <%= @comparison.calculate_correlation.round(2)%></h2>
+
+
+<%=include_gon%>
+
+<%= render partial: 'graph.html.erb', locals: {comparison: @comparison, boroughs: @boroughs} %>

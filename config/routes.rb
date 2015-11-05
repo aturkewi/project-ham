@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root 'comparisons#index'
   get 'comparisons/show' => 'comparisons#show', as: 'show_boroughs'
+
   
 
   # The priority is based upon order of creation: first created -> highest priority.
