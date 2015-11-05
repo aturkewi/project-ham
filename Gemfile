@@ -5,7 +5,7 @@ gem 'recursive-open-struct'
 gem 'annotate'
 
 gem "omniauth-github", '1.1.1'
-
+gem 'omniauth'
 gem 'figaro'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
