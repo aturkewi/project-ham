@@ -1,0 +1,8 @@
+<p><h1>Hospital</h1></p>
+<p>
+  <h2>Name: <%= @hospital.name %></h2>
+  <h2>Type: <%= @hospital.hospital_type %></h2>
+</p>
+<h3>Borough: <%= @hospital.borough.name %></h3>
+
+<%= render partial: 'favorites/add_favorite.html.erb', locals: {location: @hospital}%>

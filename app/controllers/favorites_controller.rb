@@ -1,11 +1,9 @@
 class FavoritesController < ApplicationController
 
-  def save_favorite
-    #params user, data_name such as hospital, and id of the data 
-    self.user = current_user
-    self.send(params[:favorite_data_name]) = self.send(params[:favorite_data_id]).find([:id])
-    self.save
-    #User.all.(id).favorites.(id).hospital
+  def create
+
+    binding.pry
+
   end
 
   def show_favorite
