@@ -1,1 +1,5 @@
-You are looking at <%= @search_result.name %>
+<% if @search_result %>
+<%= "You are looking at" @search_result.name %>
+<% else %>
+<%= "Your search query didn't match any results." %>
+<% end %>
