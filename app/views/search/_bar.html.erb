@@ -1,0 +1,12 @@
+<%= form_tag("search/index", method: "get") do %>
+  <%= label_tag(:keyword, "Search for:") %>
+  <%= text_field_tag(:keyword) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+<%= form_tag('/search/index', method: :get) %>  
+<p>
+<%= label_tag ''%>
+<%= select_tag :object_type, options_for_select()%>
+</p>
