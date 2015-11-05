@@ -14,6 +14,7 @@
 
 class Job < ActiveRecord::Base
   belongs_to :borough
+  has_many :favorites
   
   def self.create_csv
     csv_text = File.read('public/labor_data.csv')

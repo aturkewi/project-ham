@@ -1,11 +1,22 @@
 Rails.application.routes.draw do
 
   root 'comparisons#index'
+
+  get '/login' => 'sessions#new'
+  get '/auth/github/callback' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
   get 'comparisons/show' => 'comparisons#show', as: 'show_boroughs'
   resources 'boroughs', :only => [:show]
   resources 'search', :only => [:index]
 
-  
+  get '/hospitals/:id' => 'hospitals#show', as:'hospital'
+
+  get '/community_gardens/:id' => 'community_gardens#show', as:'community_garden'
+
+  resources :users, :only => [:show]
+
+  post '/favorites/create' => 'favorites#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

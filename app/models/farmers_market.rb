@@ -13,5 +13,5 @@
 class FarmersMarket < ActiveRecord::Base
 
   belongs_to :boroguh
-
+  has_many :favorites
 end
