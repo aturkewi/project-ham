@@ -13,5 +13,5 @@
 class CommunityGarden < ActiveRecord::Base
 
   belongs_to :borough
-
+  has_many :favorites
 end

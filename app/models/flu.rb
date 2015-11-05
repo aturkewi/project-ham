@@ -11,4 +11,5 @@
 
 class Flu < ActiveRecord::Base
   belongs_to :borough
+  has_many :favorites
 end

@@ -16,5 +16,10 @@
 
 class Favorite < ActiveRecord::Base
 
+  belongs_to :user
+  belongs_to :hospital
+  belongs_to :district
+  belongs_to :farmers_market
+  belongs_to :flu
 
 end

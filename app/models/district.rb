@@ -13,7 +13,7 @@
 class District < ActiveRecord::Base
 
   belongs_to :borough
-
+  has_many :favorites
 end
 
 
