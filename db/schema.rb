@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20151105135150) do
   end
 
   create_table "districts", force: :cascade do |t|
-    t.integer  "number"
+    t.string   "name"
     t.float    "attendance"
     t.integer  "borough_id"
     t.datetime "created_at", null: false

@@ -3,7 +3,7 @@
 <%= form_tag('/search', method: "get") do %>  
   <tr>
   <%= label_tag 'Location Type'%>
-  <%= select_tag :object_type, options_for_select([["Community Garden", "CommunityGarden"], ["School District", "Distrct"], ["Farmer's Market", "FarmersMarket"], ["Flu Vaccine Center", "Flu"], ["Hospital", "Hospital"]])%>
+  <%= select_tag :object_type, options_for_select([["Community Garden", "CommunityGarden"], ["School District", "District"], ["Farmer's Market", "FarmersMarket"], ["Flu Vaccine Center", "Flu"], ["Hospital", "Hospital"]])%>
   </tr>
   <%= label_tag(:keyword, "Search by name:") %>
   <%= text_field_tag(:keyword) %>

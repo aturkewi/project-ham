@@ -16,7 +16,7 @@ module Adapters
         boro[1].include?(district[0])
         end
       borough_id = array[0]
-      District.create(number: district[0], attendance: (district[9].to_f), borough_id: borough_id)
+      District.create(name: district[8], attendance: (district[9].to_f), borough_id: borough_id)
       end
     end 
   end

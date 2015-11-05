@@ -1,5 +1,7 @@
-<% if @search_result %>
-<%= @search_result %>
+<% if !@search_result.empty? %>
+  <% @search_result.each do |result| %>
+  <p><%= link_to result.name, "/#{result.class}s/#{result.id}" %></p>
+  <% end %>
 <% else %>
-<%= "Your search didn't match any results." %>
+  Your search did not match any results.
 <% end %>

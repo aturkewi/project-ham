@@ -6,11 +6,7 @@ class Search
     object = MODEL_ARRAY.find do |location|
       location.to_s == model
     end
-    array = object.all
-    choice = array.find do |object|
-      object.name == keyword 
-    end
-    choice
+    object.where("NAME LIKE '%#{keyword}%'")
   end
 
 end
