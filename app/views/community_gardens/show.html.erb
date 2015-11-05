@@ -1,0 +1,11 @@
+<p><h1>Community Garden</h1></p>
+<p>
+  <h2>Name: <%= @community_garden.name %></h2>
+  <h2>Size: <%= @community_garden.size %></h2>
+</p>
+<h3>Borough: <%= @community_garden.borough.name %></h3>
+
+
+
+
+<%= render partial: 'favorites/add_favorite.html.erb', locals: {location: @community_garden}%>

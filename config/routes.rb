@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   resources 'search', :only => [:index]
 
   get '/hospitals/:id' => 'hospitals#show', as:'hospital'
+
+  get '/community_gardens/:id' => 'community_gardens#show', as:'community_garden'
+
   resources :users, :only => [:show]
 
   post '/favorites/create' => 'favorites#create'
