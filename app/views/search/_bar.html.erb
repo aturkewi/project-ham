@@ -1,12 +1,13 @@
-<%= form_tag("search/index", method: "get") do %>
-  <%= label_tag(:keyword, "Search for:") %>
+<h3>Search for locations by name</h3>
+
+<%= form_tag('/search', method: "get") do %>  
+  <tr>
+  <%= label_tag 'Location Type'%>
+  <%= select_tag :object_type, options_for_select([["Community Garden", "CommunityGarden"], ["School District", "Distrct"], ["Farmer's Market", "FarmersMarket"], ["Flu Vaccine Center", "Flu"], ["Hospital", "Hospital"]])%>
+  </tr>
+  <%= label_tag(:keyword, "Search by name:") %>
   <%= text_field_tag(:keyword) %>
   <%= submit_tag("Search") %>
 <% end %>
 
 
-<%= form_tag('/search/index', method: :get) %>  
-<p>
-<%= label_tag ''%>
-<%= select_tag :object_type, options_for_select()%>
-</p>

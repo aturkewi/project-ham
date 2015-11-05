@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources 'boroughs', :only => [:show]
   root 'comparisons#index'
 
   get '/login' => 'sessions#new'
@@ -8,6 +7,8 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   get 'comparisons/show' => 'comparisons#show', as: 'show_boroughs'
+  resources 'boroughs', :only => [:show]
+  resources 'search', :only => [:index]
 
   
   resources :users, :only => [:show]
