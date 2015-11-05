@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  resources 'boroughs', :only => [:show]
   root 'comparisons#index'
   get 'comparisons/show' => 'comparisons#show', as: 'show_boroughs'
+  resources 'boroughs', :only => [:show]
+  resources 'search', :only => [:index]
 
   
 
