@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   get 'districts/:id' => 'districts#show', as:'district'
 
-  get 'farmers_markets/:id' => 'farmers_markets#show', as:'farmers_market'
+  get 'farmersmarkets/:id' => 'farmers_markets#show', as:'farmers_market'
 
 
 
