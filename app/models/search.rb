@@ -6,9 +6,6 @@ class Search
     object = MODEL_ARRAY.find do |location|
       location.to_s == model
     end
-    # Original search code: "NAME LIKE '%#{keyword}%'"
-    
-    object.where("LOWER(name) LIKE ?", "%#{keyword}%")
+    search = object.find_by(name: keyword) || object.where("LOWER(name) LIKE ?", "%#{keyword}%")
   end
-
 end
