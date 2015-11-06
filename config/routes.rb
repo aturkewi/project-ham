@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get '/hospitals/:id' => 'hospitals#show', as:'hospital'
 
-  get '/community_gardens/:id' => 'community_gardens#show', as:'community_garden'
+  get '/communitygardens/:id' => 'community_gardens#show', as:'communitygarden'
 
   resources :users, :only => [:show]
 

@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :favorites
-
+  has_many :hospitals, through: :favorites
 
 
   def self.create_with_omniauth(auth)

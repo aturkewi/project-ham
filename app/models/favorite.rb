@@ -21,5 +21,6 @@ class Favorite < ActiveRecord::Base
   belongs_to :district
   belongs_to :farmers_market
   belongs_to :flu
+  accepts_nested_attributes_for :hospital, :user
 
 end
