@@ -8,4 +8,8 @@ module ApplicationHelper
     ["hospital_count", "farmers_market_count", "flu_count", "community_garden_count", "district_attendance"]
   end
 
+  def make_id
+
+  end
+
 end
