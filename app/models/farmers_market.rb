@@ -1,4 +1,4 @@
-# == Schema Information
+ # == Schema Information
 #
 # Table name: farmers_markets
 #
@@ -12,6 +12,6 @@
 
 class FarmersMarket < ActiveRecord::Base
 
-  belongs_to :boroguh
+  belongs_to :borough
   has_many :favorites
 end

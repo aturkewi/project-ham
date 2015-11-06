@@ -14,6 +14,14 @@ Rails.application.routes.draw do
 
   get '/communitygardens/:id' => 'community_gardens#show', as:'communitygarden'
 
+  get 'flus/:id' => 'flus#show', as:'flu'
+
+  get 'districts/:id' => 'districts#show', as:'district'
+
+  get 'farmers_markets/:id' => 'farmers_markets#show', as:'farmers_market'
+
+
+
   resources :users, :only => [:show]
 
   post '/favorites/create' => 'favorites#create'
