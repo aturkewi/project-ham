@@ -21,7 +21,6 @@ Rails.application.routes.draw do
   get 'farmersmarkets/:id' => 'farmers_markets#show', as:'farmers_market'
 
 
-
   resources :users, :only => [:show]
 
   post '/favorites/create' => 'favorites#create'
