@@ -1,0 +1,7 @@
+<ul>
+  <% user.send(resource_name).each do |resource| %>
+    <li>
+      <%= link_to resource.name, resource %>
+    </li>
+  <% end %>
+</ul>
