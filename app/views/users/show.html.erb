@@ -1,3 +1,29 @@
-<h1><%= current_user.name %></h1>
+<h1><%= @user.name %></h1>
 <h2>These are all of your favorites:</h2>
 
+<div class="row">
+  <div class="col-md-2">
+    <h2>Hospitals</h2>
+    <%= render partial: 'users/resource_list.html.erb', locals: {resource_name: 'hospitals', user: @user}%>
+  </div>
+  <div class="col-md-2">
+    <h2>Flu Clinics</h2>
+    <%= render partial: 'users/resource_list.html.erb', locals: {resource_name: 'flus', user: @user}%>
+  </div>
+  <div class="col-md-2">
+    <h2>Districts</h2>
+    <%= render partial: 'users/resource_list.html.erb', locals: {resource_name: 'districts', user: @user}%>
+  </div>
+  <div class="col-md-2">
+    <h2>Jobs</h2>
+
+  </div>
+  <div class="col-md-2">
+    <h2>Farmers Markets</h2>
+    <%= render partial: 'users/resource_list.html.erb', locals: {resource_name: 'farmers_markets', user: @user}%>
+  </div>
+  <div class="col-md-2">
+    <h2>Community Gardens</h2>
+
+  </div>
+</div>
