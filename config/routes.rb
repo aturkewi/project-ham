@@ -12,6 +12,13 @@ Rails.application.routes.draw do
 
   get '/hospitals/:id' => 'hospitals#show', as:'hospital'
 
+  get 'flus/:id' => 'flus#show', as:'flu'
+
+  get 'districts/:id' => 'districts#show', as:'district'
+
+  get 'farmers_markets/:id' => 'farmers_markets#show', as:'farmers_market'
+
+  #resources 'community_gardens', :only => [:show]
   get '/community_gardens/:id' => 'community_gardens#show', as:'community_garden'
 
   resources :users, :only => [:show]

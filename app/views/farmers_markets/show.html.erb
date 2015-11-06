@@ -1,0 +1,9 @@
+<p><h1>Farmers Market</h1></p>
+<p>
+  <h2>Name: <%= @farmers_market.name %></h2>
+  <h2>Day(s): <%= @farmers_market.day %></h2>
+</p>
+<h3>Borough: <%= @farmers_market.borough.name %></h3>
+
+
+<%= render partial: 'favorites/add_favorite.html.erb', locals: {location: @farmers_market}%>
