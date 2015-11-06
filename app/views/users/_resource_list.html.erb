@@ -2,6 +2,8 @@
   <% user.send(resource_name).each do |resource| %>
     <li>
       <%= link_to resource.name, resource %>
+      <% favorite = Favorite.where("user_id=#{user.id} AND #{IdViewObject.new.resource_to_id(resource)}=#{resource.id}").first %>
+      <%= link_to "Delete", favorite, method: :delete %>
     </li>
   <% end %>
 </ul>

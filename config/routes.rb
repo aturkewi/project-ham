@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources 'boroughs', :only => [:show]
   resources 'search', :only => [:index]
 
+  
+
   get '/hospitals/:id' => 'hospitals#show', as:'hospital'
 
   get '/communitygardens/:id' => 'community_gardens#show', as:'communitygarden'
@@ -20,6 +22,7 @@ Rails.application.routes.draw do
 
   get 'farmersmarkets/:id' => 'farmers_markets#show', as:'farmers_market'
 
+  delete 'favorites/:id' => 'favorites#destroy', as:'favorite'
 
 
   resources :users, :only => [:show]
