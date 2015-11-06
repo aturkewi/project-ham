@@ -19,6 +19,10 @@ class Borough < ActiveRecord::Base
   has_many :farmers_markets
   has_many :community_gardens
   
+  def population_density
+    population/area
+  end
+
   def hospital_count(normalizer)
     num_of_hospitals = hospitals.count.to_f
     normalizer != "nil" ? num_of_hospitals/self.send(normalizer) : num_of_hospitals
