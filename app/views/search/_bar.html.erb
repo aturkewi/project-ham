@@ -1,5 +1,6 @@
 <h3>Search for locations by name</h3>
 
+<div class="form-group">
 <%= form_tag('/search', method: "get") do %>  
   <tr>
   <%= label_tag 'Location Type'%>
@@ -9,5 +10,5 @@
   <%= text_field_tag(:keyword) %>
   <%= submit_tag("Search") %>
 <% end %>
-
+</div>
 

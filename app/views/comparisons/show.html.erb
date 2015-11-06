@@ -1,5 +1,5 @@
+<center>
 <h1>Check out your data set comparison</h1>
-
 
 <h2><%= readable(@comparison.data1) %> Correlated Against <%= readable(@comparison.data2) %></h2>
 
@@ -11,3 +11,5 @@
 <%=include_gon%>
 
 <%= render partial: 'graph.html.erb', locals: {comparison: @comparison, boroughs: @boroughs} %>
+
+</center>
