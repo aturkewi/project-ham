@@ -2,12 +2,12 @@
 #
 # Table name: favorites
 #
-#  id                :integer          not null, primary key
-#  user_id           :integer
-#  favoriteable_id   :integer
-#  favoriteable_type :string
-#  created_at        :datetime         not null
-#  updated_at        :datetime         not null
+#  id               :integer          not null, primary key
+#  user_id          :integer
+#  favoritable_id   :integer
+#  favoritable_type :string
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
 #
 
 require 'test_helper'

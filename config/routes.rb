@@ -10,11 +10,11 @@ Rails.application.routes.draw do
   resources 'boroughs', :only => [:show]
   resources 'search', :only => [:index]
 
-  
+
 
   get '/hospitals/:id' => 'hospitals#show', as:'hospital'
 
-  get '/communitygardens/:id' => 'community_gardens#show', as:'communitygarden'
+  get '/communitygardens/:id' => 'community_gardens#show', as:'community_garden'
 
   get 'flus/:id' => 'flus#show', as:'flu'
 

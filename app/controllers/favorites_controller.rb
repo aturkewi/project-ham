@@ -1,7 +1,6 @@
 class FavoritesController < ApplicationController
 
   def create
-    binding.pry
     favorite = Favorite.new(favorite_params)
     favorite.save
     redirect_to user_path(params[:favorite][:user_id])

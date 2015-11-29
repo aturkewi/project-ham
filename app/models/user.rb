@@ -17,8 +17,8 @@ class User < ActiveRecord::Base
   has_many :flus, through: :favorites, source: :favoritable, source_type: 'Flu'
   has_many :districts, through: :favorites, source: :favoritable, source_type: 'District'
   has_many :jobs, through: :favorites, source: :favoritable, source_type: 'Job'
-  has_many :farmers_markets, through: :favorites, source: :favoritable, source_type: 'Hospital'
-  has_many :community_gardens, through: :favorites, source: :favoritable, source_type: 'Hospital'
+  has_many :farmers_markets, through: :favorites, source: :favoritable, source_type: 'FarmersMarket'
+  has_many :community_gardens, through: :favorites, source: :favoritable, source_type: 'CommunityGarden'
 
   def self.create_with_omniauth(auth)
     create! do |user|
