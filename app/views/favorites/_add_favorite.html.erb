@@ -1,7 +1,8 @@
-<% if logged_in? %> 
+<% if logged_in? %>
 
   <%= form_for Favorite.new, :url => favorites_create_path do |f|%>
-    <%= f.hidden_field IdViewObject.new.resource_to_id(location), value:location.id %>
+    <%= f.hidden_field :favoritable_type, value:location.class %>
+    <%= f.hidden_field :favoritable_id, value:location.id %>
     <%= f.hidden_field :user_id, value:current_user.id %>
     <%= f.submit "Add to Favorites" %>
   <% end %>
