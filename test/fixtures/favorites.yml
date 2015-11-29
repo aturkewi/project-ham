@@ -10,6 +10,14 @@
 #  updated_at        :datetime         not null
 #
 
-class Favorite < ActiveRecord::Base
-  belongs_to :favoritable, polymorphic: true
-end
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  favoriteable_id: 1
+  favoriteable_type: MyString
+
+two:
+  user_id: 1
+  favoriteable_id: 1
+  favoriteable_type: MyString

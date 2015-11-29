@@ -3,7 +3,7 @@
 # Table name: districts
 #
 #  id         :integer          not null, primary key
-#  number     :integer
+#  name       :string
 #  attendance :float
 #  borough_id :integer
 #  created_at :datetime         not null

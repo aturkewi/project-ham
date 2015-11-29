@@ -10,6 +10,10 @@
 #  updated_at        :datetime         not null
 #
 
-class Favorite < ActiveRecord::Base
-  belongs_to :favoritable, polymorphic: true
+require 'test_helper'
+
+class FavoriteTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end
