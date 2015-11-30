@@ -11,15 +11,9 @@
 #
 
 class Hospital < ActiveRecord::Base
-
-
   belongs_to :borough
   has_many :favorites, as: :favoritable
   has_many :users, through: :favorites
 
-
-  def self.number_of
-    binding.pry
-  end
 
 end
